@@ -1,0 +1,632 @@
+/* PAGE */
+@font-face {
+  font-family: fascinate-r;
+  src: url('../fonts/Fascinate-regular/Fascinate-Regular.otf');
+}
+@font-face {
+  font-family: opensans-r;
+  src: url('../fonts/Open-Sans/open-sans.regular.ttf');
+}
+@font-face {
+  font-family: opensans-sb;
+  src: url('../fonts/Open-Sans/open-sans.semibold.ttf');
+}
+@font-face {
+  font-family: opensans-b;
+  src: url('../fonts/Open-Sans/open-sans.bold.ttf');
+}
+@font-face {
+  font-family: opensans-i;
+  src: url('../fonts/Open-Sans/open-sans.italic.ttf');
+}
+@font-face {
+  font-family: opensans-bi;
+  src: url('../fonts/Open-Sans/open-sans.bold-italic.ttf');
+}
+@font-face {
+  font-family: opensans-xb;
+  src: url('../fonts/Open-Sans/open-sans.extrabold.ttf');
+}
+
+body,
+.pure-g [class*=pure-u] {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+}
+h2 {
+  padding: 20px;
+}
+.clear {
+  clear: both;
+}
+
+code {
+  display: block;
+  margin: 20px 0 15px 0;
+  padding: 10px;
+  background: #eee;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.loading-container {
+  position: relative;
+  width: 100%;
+  background: none;
+}
+.loading-image {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 550px;
+}
+.sidebar-menu {
+  float: left;
+  height: 100%;
+}
+.active-template {
+  float: left;
+  height: 100%;
+  overflow-y: auto; 
+  position: relative;
+}
+.active-template::-webkit-scrollbar {
+  width: 10px;
+}
+.active-template::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
+  /* background: #888;  */
+  background: -webkit-linear-gradient(#1e7adf, #5030b9);
+}
+.active-template::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.5); 
+}
+
+.ant-layout-sider-trigger {
+  display: none;
+}
+
+@media(max-width: 767px) {
+  .loading-container {
+    min-height: 500px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 5px;
+  }
+  .ant-card {
+      margin-top: 10px;
+  }
+  .ant-card-cover {
+      max-height: 220px;
+  }
+
+  .active-template {
+    padding: 4% 5%;
+    width: calc(100% - 151px);
+  }
+  .sidebar-menu { 
+    width: 151px;
+  }
+  .sidebar .logo {
+    font-size: 30px;
+  }
+  .sidebar .tagline {
+    font-size: 10px;
+  }
+  .ant-layout-sider {
+    margin-top: 20px;
+  }
+  .ant-menu-item {
+    height: 30px !important;
+    line-height: 30px !important;
+    margin: 10px 0;
+    font-size: 11px !important;
+    width: 70% !important;
+  }
+  .ant-menu-item-selected {
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+  .ant-menu-item-selected {
+    width: 85% !important;
+  }
+  .sidebar-icon {
+    width: 30px;
+  }
+  .sidebar-item {
+    width: calc(100% - 30px);
+  }
+  .sidebar-icon img {
+    width: 14px;
+  }
+  .ant-menu-item-selected .sidebar-item {
+    padding-left: 20px;
+  }
+  .ant-menu-item-selected .gradient {
+      width: calc(100% - 30px);
+  }
+
+  .template-heading span {
+    font-size: 22px;
+  }
+  .tokenInfo .key, .tokenInfo .value {
+    font-size: 12px;
+  }
+
+  .polls-box .polls-box-body, .polls-box .polls-box-head {
+    padding: 20px;
+  }
+  .polls-box p {
+    margin-bottom: .5em;
+  }
+  .polls-box .btn-submitpoll {
+    font-size: 9px;
+  }
+
+  .artist-polls .head h1 {
+    float: none !important;
+  }
+  .artist-polls .head .ant-radio-group {
+    margin: 20px;
+    float: none !important;
+  }
+  .artist-polls .head .ant-radio-group .ant-radio-button-wrapper {
+    height: 45px;
+    line-height: 45px;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+  .polls-container {
+    margin-top: 60px;
+  }
+  .polls-container .ant-row, .polls-container h3 {
+    margin: -20px 0 0;
+  }
+
+  .fan-tokens .token-item img {
+    width: 20px;
+    height: 20px;
+  }
+  .fan-tokens .artist, .fan-tokens .tokens, .fan-tokens .token-name {
+    font-size: 12px;
+  }
+  .fan-tokens .ant-card {
+    width: 100%;
+  }
+  .fan-tokens .send-token {
+    padding: 6px 10px;
+    font-size: 9px;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  .loading-container {
+    min-height: 500px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 5px;
+  }
+  .ant-card {
+      margin-top: 10px;
+  }
+  .ant-card-cover {
+      max-height: 200px;
+  }
+
+  .active-template {
+    padding:4% 6%;
+    width: calc(100% - 191px);
+  }
+  .sidebar-menu { 
+    width: 191px;
+  }
+  .sidebar .logo {
+    font-size: 35px;
+  }
+  .sidebar .tagline {
+    font-size: 11px;
+  }
+  .ant-layout-sider {
+    margin-top: 26px;
+  }
+  .ant-menu-item {
+    height: 40px !important;
+    line-height: 40px !important;
+    margin-bottom: 14px !important;
+    font-size: 12px;
+  }
+  .ant-menu-item-selected {
+    height: 55px !important;
+    line-height: 55px !important;
+  }
+  .ant-menu-item-selected {
+    width: 105% !important;
+  }
+  .sidebar-icon {
+    width: 40px;
+  }
+  .sidebar-item {
+    width: calc(100% - 40px);
+  }
+  .sidebar-icon img {
+    width: 18px;
+  }
+  .ant-menu-item-selected .sidebar-item {
+    padding-left: 26px;
+  }
+  .ant-menu-item-selected .gradient {
+      width: calc(100% - 40px);
+  }
+
+  .template-heading span {
+    font-size: 25px;
+  }
+  .tokenInfo .key, .tokenInfo .value {
+    font-size: 11px;
+  }
+
+  .artist-polls .head .ant-radio-group {
+    margin-left: 20px;
+  }
+  .artist-polls .head .ant-radio-group .ant-radio-button-wrapper {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+
+  .artist-polls .head h1 {
+    float: none !important;
+  }
+  .artist-polls .head .ant-radio-group {
+    margin: 20px;
+    float: none !important;
+  }
+  .artist-polls .head .ant-radio-group .ant-radio-button-wrapper {
+    height: 45px;
+    line-height: 45px;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+  .polls-container {
+    margin-top: 60px;
+  }
+  .polls-container .ant-row, .polls-container h3 {
+    margin: -10px 0 0;
+  }
+
+  .fan-tokens .artist, .fan-tokens .tokens, .fan-tokens .token-name {
+    font-size: 14px;
+  }
+  .fan-tokens .ant-card {
+    width: 100%;
+  }
+  .fan-tokens .send-token {
+    padding: 7px 15px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .loading-container {
+    min-height: 600px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 10px;
+  }
+  .ant-card {
+      margin-top: 20px;
+  }
+  .ant-card-cover {
+      max-height: 200px;
+  }
+  .ant-card-body {
+    padding: 18px;
+  }
+  .ant-card-meta-title {
+    font-size: 16px;
+  }
+  .ant-card-body .price {
+    font-size: 20px;
+  }
+
+  .active-template {
+    padding: 3% 7%;
+    width: calc(100% - 221px);
+  }
+  .sidebar-menu { 
+    width: 221px;
+  }
+  .sidebar .logo {
+    font-size: 40px;
+  }
+  .sidebar .tagline {
+    font-size: 12px;
+  }
+  .ant-layout-sider {
+    margin-top: 32px;
+  }
+  .ant-menu-item {
+    height: 45px !important;
+    line-height: 45px !important;
+    margin-bottom: 18px !important;
+    font-size: 14px !important;
+  }
+  .ant-menu-item-selected {
+    height: 55px !important;
+    line-height: 55px !important;
+  }
+  .sidebar-icon {
+    width: 50px;
+  }
+  .sidebar-item {
+    width: calc(100% - 50px);
+  }
+  .sidebar-icon img {
+    width: 22px;
+  }
+  .ant-menu-item-selected .sidebar-item {
+    padding-left: 30px;
+  }
+  .ant-menu-item-selected .gradient {
+      width: calc(100% - 50px);
+  }
+
+  .template-heading span {
+    font-size: 28px;
+  }
+  .tokenInfo .key, .tokenInfo .value {
+    font-size: 13px;
+  }
+
+  .polls-box .polls-box-body, .polls-box .polls-box-head {
+    padding: 20px;
+  }
+  .polls-box p {
+    margin-bottom: .5em;
+  }
+  .polls-box .btn-submitpoll {
+    font-size: 9px;
+  }
+
+  .artist-polls .head h1 {
+    float: none !important;
+  }
+  .artist-polls .head .ant-radio-group {
+    margin: 20px;
+    float: none !important;
+  }
+  .artist-polls .head .ant-radio-group .ant-radio-button-wrapper {
+    height: 45px;
+    line-height: 45px;
+    font-size: 12px;
+    padding: 0 20px;
+  }
+  .polls-container {
+    margin-top: 60px;
+  }
+  .polls-container .ant-row, .polls-container h3 {
+    margin: -20px 0 0;
+  }
+
+  .fan-tokens .artist {
+    font-size: 16px;
+  }
+  .fan-tokens .ant-card {
+    width: 85%;
+  }
+  .fan-tokens .send-token {
+    padding: 7px 18px;
+    font-size: 12px;
+  }
+}
+
+
+.polls-container .ant-row, .polls-container h3 {
+  margin: -20px 0 0;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .loading-container {
+    min-height: 600px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 10px;
+  }
+  .ant-card {
+      margin-top: 20px;
+  }
+  .ant-card-cover {
+      max-height: 250px;
+  }
+
+  .active-template {
+    padding: 4% 8%;
+    width: calc(100% - 261px);
+  }
+  .sidebar-menu { 
+    width: 261px;
+  }
+  .sidebar .logo {
+    font-size: 45px;
+    padding-top: 50px;
+  }
+  .sidebar .tagline {
+    font-size: 13px;
+  }
+  .ant-layout-sider {
+    margin-top: 40px;
+  }
+  .ant-menu-item {
+    height: 55px !important;
+    line-height: 55px !important;
+    font-size: 16px !important;
+    margin-bottom: 20px !important;
+  }
+  .ant-menu-item-selected {
+    height: 70px !important;
+    line-height: 70px !important;
+  }
+  .sidebar-icon {
+    width: 60px;
+  }
+  .sidebar-item {
+    width: calc(100% - 60px);
+  }
+  .sidebar-icon img {
+    width: 26px;
+  }
+  .ant-menu-item-selected .sidebar-item {
+    padding-left: 35px;
+  }
+  .ant-menu-item-selected .gradient {
+      width: calc(100% - 60px);
+  }
+
+  .template-heading span {
+    font-size: 32px;
+  }
+  .artist-polls .head .ant-radio-group {
+    margin-left: 50px;
+  }
+  .artist-polls .head .ant-radio-group .ant-radio-button-wrapper {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .fan-tokens .ant-card {
+    width: 88%;
+  }
+  .fan-tokens .send-token {
+    padding: 8px 20px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+  .loading-container {
+    min-height: 650px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 15px;
+  }
+  .ant-card {
+      margin-top: 30px;
+  }
+  .ant-card-cover {
+      max-height: 300px;
+  }
+
+  .polls-box p {
+    margin-bottom: .5em;
+  }
+  .fan-tokens .ant-card {
+    width: 80%;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1800px) {
+  .loading-container {
+    min-height: 700px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 20px;
+  }
+  .ant-card {
+      margin-top: 40px;
+  }
+  .ant-card-cover {
+      max-height: 200px;
+  }
+
+  .polls-box .polls-box-body, .polls-box .polls-box-head {
+    padding: 20px;
+  }
+  .polls-box p {
+    margin-bottom: .5em;
+  }
+  .polls-box .btn-submitpoll {
+    font-size: 9px;
+  }
+  .fan-tokens .ant-card {
+    width: 75%;
+  }
+}
+@media (min-width: 1800px) {
+  .loading-container {
+    min-height: 700px;
+  }
+  .template-content .ant-col-xxl-6 {
+      padding: 0 20px;
+  }
+  .ant-card {
+      margin-top: 40px;
+  }
+  .ant-card-cover {
+      max-height: 260px;
+  }
+  .fan-tokens .ant-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1401px) {
+
+  .active-template {
+    padding: 3% 8%;
+    width: calc(100% - 301px);
+  }
+  .sidebar-menu { 
+    width: 301px;
+  }
+  .sidebar .logo {
+    font-size: 50px;
+    padding-top: 50px;
+  }
+  .sidebar .tagline {
+    font-size: 13px;
+  }
+  .ant-layout-sider {
+    margin-top: 50px;
+  }
+  .ant-menu-item {
+    height: 60px !important;
+    line-height: 60px !important;
+    margin-bottom: 25px !important;
+    font-size: 18px !important;
+  }
+  .ant-menu-item-selected {
+    height: 70px !important;
+    line-height: 70px !important;
+  }
+  .sidebar-icon {
+    width: 80px;
+  }
+  .sidebar-item {
+    width: calc(100% - 80px);
+  }
+  .sidebar-icon img {
+    width: 30px;
+  }
+  .ant-menu-item-selected .sidebar-item {
+    padding-left: 35px;
+  }
+  .ant-menu-item-selected .gradient {
+      width: calc(100% - 80px);
+  }
+
+  .template-heading span {
+    font-size: 38px;
+  }
+
+  .fan-tokens .send-token {
+    padding: 10px 30px;
+    font-size: 12px;
+  }
+}

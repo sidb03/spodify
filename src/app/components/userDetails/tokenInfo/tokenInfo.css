@@ -1,0 +1,15 @@
+.tokenInfo p {
+    text-align: right;
+}
+.tokenInfo .key {
+    text-transform: uppercase;
+    font-family: opensans-b;
+    color: rgb(200,200,200);
+    letter-spacing: 1.1px;
+}
+.tokenInfo .value {
+    text-transform: uppercase;
+    font-family: opensans-b;
+    color: black;
+    letter-spacing: 1.1px;
+}

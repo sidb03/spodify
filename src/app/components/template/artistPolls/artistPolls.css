@@ -1,0 +1,150 @@
+.artist-polls .template-heading span::after {
+    background: -webkit-linear-gradient(to right, #fa9f9b, #982c61) !important;
+    background: linear-gradient(to right, #fa9f9b, #982c61) !important;
+}
+.artist-polls .head h1 {
+    float: left;
+}
+.artist-polls .head .ant-radio-group {
+    float: left;
+    margin-left: 60px;
+}
+.artist-polls .head .ant-radio-group .ant-radio-button-wrapper {
+    height: 55px;
+    line-height: 55px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: opensans-b;
+    letter-spacing: 0.9px;
+    padding: 0 25px;
+    color: #d9d9d9;
+}
+.artist-polls .head .ant-radio-group .ant-radio-button-wrapper-checked {
+    background: -webkit-linear-gradient(to left, #fa9f9b, #982c61) !important;
+    background: linear-gradient(to left, #fa9f9b, #982c61) !important;
+    color: white;
+    border: 1px solid #fa9f9b;
+    box-shadow: 0 0;
+}
+.artist-polls .head .ant-radio-button-wrapper-checked:hover, .ant-radio-button-wrapper-focused {
+    color: white !important;
+}
+.artist-polls .head .ant-radio-button-wrapper:hover,.artist-polls .head .ant-radio-button-wrapper-focused {
+    color: #d9d9d9;
+}
+.artist-polls .head .ant-radio-button-wrapper:first-child {
+    border-radius: 6px 0 0 6px;
+}
+.artist-polls .head .ant-radio-button-wrapper:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.polls-container .ant-col-md-12, .polls-container .ant-col-xs-24, .polls-container .ant-col-xxl-8 {
+    padding: 0 20px;
+}
+.polls-container {
+    margin-top: 75px; 
+}
+.polls-container h3 {
+    color: #d1d1d1  ;
+    font-family: opensans-b;
+    letter-spacing: 1.1px;
+    padding-left: 20px;
+}
+.polls-container h3 span {
+    color: #6e6e6e;
+}
+
+.polls-box {
+    background-color: #ffffff;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    width: 100%;
+    position: relative;
+    border-radius: 8px !important;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.polls-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 8px;
+    background: -webkit-linear-gradient(to right, #6970f4, #86deff) !important;
+    background: linear-gradient(to right, #6970f4, #86deff) !important;
+    width: 100%;
+    left: 0;
+}
+.polls-box .polls-box-head {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 25px 20px;
+}
+.artist-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.polls-box-head .artist {
+    font-family: opensans-sb;
+    color: #5f6b94;
+    padding-left: 5px;
+}
+.polls-box-head .question {
+    font-family: opensans-b;
+    color: #5f6b94;
+    font-size: 15px;
+}
+.polls-box-head .tokensleft {
+    font-family: opensans-sb;
+    color: #b4bbd2;
+    font-size: 12px;
+}
+
+.polls-box .polls-box-body {
+    padding: 30px 20px;
+}
+.polls-box-body .ant-radio-wrapper {
+    font-family: opensans-r;
+    height: 40px !important;
+    line-height: 40px !important;
+}
+.polls-box-body .ant-radio-inner {
+    background-color: #f5f7ff !important;
+  border: solid 0.5px #e5ecff !important;
+}
+
+.left-token {
+    font-family: opensans-i;
+    color: #b4bbd2;
+    padding: 20px 0;
+}
+.left-token span {
+    font-family: opensans-bi;
+    color: #76a2f9;
+}
+
+.token-input {
+    border-radius: 25px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    padding: 10px 15px;
+    width: 60%;
+}
+.token-input:focus {
+    outline: none;
+}
+.token-input::placeholder {
+    color: #e5e5e5;
+}
+.btn-submitpoll {
+    color: white;
+    background-image: linear-gradient(168deg, #6068f6, #86deff);
+    border-radius: 100px;
+    padding: 12px 10px;
+    width: 35%;
+    margin-left: 5%;
+    font-family: opensans-b;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-size: 12px;
+    cursor: pointer;
+}
